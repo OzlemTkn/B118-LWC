@@ -1,0 +1,21 @@
+<!-- sldsValidatorIgnore -->
+<template>
+<lightning-card title="Data Binding-oninput-onchange-onblur">
+    <!-- sldsValidatorIgnoreNextLine -->
+    <div> İsim: {isim} </div> 
+    <input type="text" value="Ali" oninput = {handleInput}/>
+
+</lightning-card>
+
+<lightning-card>
+    <div> Soyisim: {soyisim} </div> 
+    <lightning-input type="text" onchange={handleChange}></lightning-input>
+</lightning-card>
+<!--Onchange ve oninput eventleri ayni sekilde calisir. 
+    Sadece oninput Lightning tagleri ile calismaz.
+Onblur calismasi icin ekranda baska bir yere tiklamak gerekir-->
+  <lightning-card>
+    <div>Ulke: {ulke} </div>
+    <lightning-input type="text" onblur={handleBlur}></lightning-input>
+  </lightning-card>
+</template>
