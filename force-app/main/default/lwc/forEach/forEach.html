@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="For Each">
+        <template for:each={cityList} for:item="city">
+                <p key={city.id}> {city} </p>
+        </template>
+    </lightning-card>
+
+    <lightning-card title = "ForEach Example2">
+<template for:each={customerList} for:item="w">
+    <li key={w.id}>
+        <ol>{w.id}</ol>
+        <ol>{w.name}</ol>
+        <ol>{w.phone}</ol>
+        <ol>{w.email}</ol>
+       <img src={w.imgURL} alt="resim">
+    </li>
+</template>
+    </lightning-card>
+</template>

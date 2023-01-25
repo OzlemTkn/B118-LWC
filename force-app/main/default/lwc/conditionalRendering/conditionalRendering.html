@@ -1,0 +1,17 @@
+<template>
+<lightning-card title = "if-true-false">
+    <template if:false= {flag} >
+        <p>Eger flag true ise bu bolum gozukur</p>
+    </template>   
+</lightning-card>
+
+<lightning-card title ="con rendering example">
+    <div>Lütfen sözleşmeyi kabul ediniz.</div>
+<lightning-input type="checkbox" label="Sözleşme" onchange={handleChange}></lightning-input>
+<template if:false={flag}>
+    <br>
+<div>Sözleşmeyi kabul ettiniz</div>
+</template>
+</lightning-card>
+
+</template>
