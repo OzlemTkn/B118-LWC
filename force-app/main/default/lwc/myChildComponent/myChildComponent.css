@@ -1,0 +1,17 @@
+h1{
+    color:blueviolet;
+}
+
+h2{
+font-size: larger;
+font-weight: bold;
+color:blue;
+background-color: bisque;
+
+}
+p{
+    color:var(--renk, rgb(243, 67, 14));
+    font-size:var(--fontboyutu, larger) ;
+}
+
+

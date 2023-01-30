@@ -3,11 +3,11 @@
     Bunlar boolean return eder.-->
         <template iterator:it={customerList}><!--Listin içerisinden tek tek elementleri ceker, it ismi altında tutar-->
              <li key={it.value.id}> <!--it.value kullanmak zorundayiz.id yazmasak da olur-->
-                <div if:true={it.first} >$$$$$$$$$$$$$$$$$$$$ </div>
+                <div if:true={it.first} class = "first-class"> </div>
                 <ul>{it.value.name}</ul>
                 <ul>{it.value.phone}</ul>
                 <ul>{it.value.email}</ul>
-                <div if:true={it.last}>***********************</div>
+                <div if:true={it.last} class="last-class"></div>
 <!--it.last, it.first, it.index kullanilabilir. -->
              </li>
         </template>

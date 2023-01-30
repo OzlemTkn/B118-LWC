@@ -1,0 +1,10 @@
+.first-class{
+border-style:dotted;
+border-color: blue;
+
+}
+.last-class{
+    border-style:dashed;
+    border-color: rgb(255, 0, 234);
+
+}

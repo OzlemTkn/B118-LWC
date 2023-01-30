@@ -1,0 +1,15 @@
+h1{
+    color:brown;
+}
+/* c-my-child-component{Sadece child componente ulasir, ama stil tanimlanmamis ogelere ulasir
+    color:chocolate}  */
+:host{ /*host ile component icindeki ve alt componentler icerisinde tanımlanmamis stillere
+    veya ulasilamayan stil turlerine ulasilir.  */
+color: rgb(3, 71, 71);
+}
+
+c-my-child-component{
+    --renk:black; /*Styling hook ile stil kancası olusturduk
+    Stili bir degiskene atadık, parenttan override ettik. */
+    --fontboyutu: 25px;
+}
