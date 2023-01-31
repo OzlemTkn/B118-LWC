@@ -1,0 +1,20 @@
+<template>
+    <lightning-card title="Track Practice">
+      
+            <!-- 1.yol:
+            <lightning-input label="Name" onchange={handleName}></lightning-input>
+            <lightning-input label="Last Name" onchange={handleLname}></lightning-input>
+            <lightning-input label="Age" onchange={handleAge}></lightning-input> -->
+            
+        <lightning-input name = "isim" label="Name" onchange={handleChange}></lightning-input>
+        <lightning-input name="soyisim" label="Last Name" onchange={handleChange}></lightning-input>
+        <lightning-input name="yas" label="Age" onchange={handleChange}></lightning-input>
+
+        <div>Adi:{customer.name}</div>
+        <div>Adi:{customer.LName}</div>
+        <div>Adi:{customer.age}</div>
+
+
+    </lightning-card>
+
+</template>
