@@ -10,7 +10,7 @@ export default class ExpressionPractice extends LightningElement {
             //bunun icin if yapisini kullandik. 
          const field =  event.target.name;
          if(field === 'fname'){
-         this.firstName= event.target.value;
+         this.firstName= event.target.value.toUpperCase();
         }
         if(field === 'lname'){
             this.lastName=event.target.value;
@@ -23,7 +23,7 @@ export default class ExpressionPractice extends LightningElement {
         }
        
 }
-get upperCaseFullName(){
-    return `${this.firstName} ${this.lastName}`.toUpperCase();
-}
+// get upperCaseFullName(){
+//     return `${this.firstName} ${this.lastName}`.toUpperCase();
+// }
 }

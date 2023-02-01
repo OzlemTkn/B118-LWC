@@ -11,7 +11,5 @@ background-color: bisque;
 }
 p{
     color:var(--renk, rgb(243, 67, 14));
-    font-size:var(--fontboyutu, larger) ;
+    font-size:var(--fontboyutu, larger ) ;
 }
-
-

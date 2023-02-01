@@ -1,8 +1,8 @@
 import { LightningElement } from 'lwc';
 
 export default class GetterPractice extends LightningElement {
-    sayi1 = 5;
-    sayi2 = 3;
+    sayi1 = null;
+    sayi2 = 0;
     handleSayi1(event){
         this.sayi1 = event.target.value;
     }

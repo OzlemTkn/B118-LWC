@@ -1,6 +1,10 @@
 <template>
     <lightning-card title="Track Practice2">
-        <lightning-input label = "deger" onchange={handleAdd}></lightning-input>
-        <lightning-button label="ADD" onclick={handleClick}></lightning-button>
+        <lightning-input label = "deger" onchange={handleSayi}></lightning-input>
+        <lightning-button label="ADD" onclick={handleAdd}>
+        </lightning-button>
+        <template for:each={numbers} for:item="num">
+            <p key={num.id}>{num}</p>
+        </template>
     </lightning-card>
 </template>

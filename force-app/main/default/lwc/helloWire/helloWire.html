@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Wire Practice1">
+        <template for:each={conList} for:item="contact">
+            <p key={contact.id}>{contact.LastName}</p>
+            <p key={contact.id}>{contact.id}</p>
+        </template>
+        <!-- 2. yol : imperatively olarak ekledik. Oncelikle Buton ekledik, contactları butona bagladik.  -->
+            <!-- <lightning-button label="Show Contacts" onclick={getContactList}></lightning-button> -->
+       
+    </lightning-card>
+</template>
