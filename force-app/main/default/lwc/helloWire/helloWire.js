@@ -1,18 +1,18 @@
-import { LightningElement, track,wire} from 'lwc';
-import getContacts from '@salesforce/apex/getContactsClass.getContacts';
+import {track, wire, LightningElement} from 'lwc';
+import getContacts from '@salesforce/apex/ContactController.getContacts';
 export default class HelloWire extends LightningElement {
 
-    @track conList;
+    @track conList=[];
 //1. Way: CAlling Apex method with a function 
 //Fonksiyon ile Apex method cagirirken @wire(ApexMethod) ile arkasından fonksiyon olustururuz.
 //Asagidaki yapiyi kullaniyoruz. 
 @wire(getContacts)
 contactListesi({data,error}){
     if(data){
-        this.conlist = data;
+        this.conList = data;
     }
     else if(error){
-       this.conList = undefined;
+console.log('error');
     }
 }
 //2. way: calling Apex method imperatively, imperatively Apex method cagirmak icin 

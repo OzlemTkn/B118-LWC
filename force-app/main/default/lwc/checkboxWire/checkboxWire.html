@@ -1,0 +1,15 @@
+<template>
+    <lightning-card title="Wire Practice with checkbox">
+ 
+    
+      <template if:true={showAccount}>
+         <template for:each ={accList} for:item="account">
+             <lightning-card key = {account.Name}> 
+                 <p>{account.Name}</p> 
+             </lightning-card>
+         </template> 
+      </template>   
+ 
+    <lightning-input type="checkbox" label="Show Accounts" checked={showAccount} onchange={handleChange}></lightning-input>
+ </lightning-card>
+ </template>
