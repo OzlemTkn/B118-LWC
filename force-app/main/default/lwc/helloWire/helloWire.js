@@ -4,19 +4,21 @@ export default class HelloWire extends LightningElement {
 
     @track conList=[];
 //1. Way: CAlling Apex method with a function 
-//Fonksiyon ile Apex method cagirirken @wire(ApexMethod) ile arkasından fonksiyon olustururuz.
+//Fonksiyon ile Apex method cagirirken @wire(ApexMethod) ile arkasından 
+//fonksiyon olustururuz.
 //Asagidaki yapiyi kullaniyoruz. 
-@wire(getContacts)
+@wire (getContacts)
 contactListesi({data,error}){
     if(data){
         this.conList = data;
     }
     else if(error){
-console.log('error');
+        console.log('error' + error);
     }
 }
 //2. way: calling Apex method imperatively, imperatively Apex method cagirmak icin 
-// wire decorator kullanmıyoruz, bir method olusturarak, method içinden apex methodu cekiyoruz. 
+// wire decorator kullanmıyoruz, bir method olusturarak, 
+//method içinden apex methodu cekiyoruz. 
 // Asagidaki gibi bir yapi kullanarak  databaseden data cekiyoruz. 
 
 // getContactList(){

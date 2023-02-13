@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Get Accounts with Wire">
+        <!-- Accountlari goruntulemek icin input box olusturuyoruz. -->
+        <lightning-input 
+        label="Search Account" 
+        onchange={handleChange}>
+        </lightning-input>
+
+        <!-- Accountlari alt alta listelemek icin for:each iterator kullanilir. -->   
+        <!-- <template for:each={accounts.data} for:item="acc">
+             <p key={acc.id}>{acc.Name} </p>
+             <p key={acc.id}>{acc.Phone}</p>
+             </template> 
+            2.yol imperatively de data kelimesini kaldiriyoruz-->
+
+<lightning-button label="Get Accounts" 
+         onclick={handleGetAccounts}>
+</lightning-button>
+    <template for:each={accounts} for:item="acc">
+        <p key={acc.id}>{acc.Name}</p>
+        <p key={acc.id}>{acc.Phone}</p>
+    </template>
+</lightning-card>
+</template>
