@@ -1,5 +1,6 @@
 <template>
     <lightning-card title="For Each">
+       
         <template for:each={cityList} for:item="city">
                 <p key={city.id}> {city} </p>
         </template>

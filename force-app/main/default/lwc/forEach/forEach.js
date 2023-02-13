@@ -1,7 +1,10 @@
-import { LightningElement } from 'lwc';
+import { api, LightningElement } from 'lwc';
 
 export default class ForEach extends LightningElement {
-    cityList = ['Ankara','istanbul','Dallas','Berlin'];
+    
+
+  
+  cityList = ['Ankara','istanbul','Dallas','Berlin'];
     customerList = [
         {
          id:1,
