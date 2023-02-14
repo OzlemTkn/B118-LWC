@@ -5,11 +5,12 @@ filterWord = '';
 
 //filterWord ile filter dinamik bir hale gelir.
 
-// @wire(getAccounts, {filter:'$filterWord'}) //filterWord classtaki filter parametresine esitledik.c/car
+// @wire(getAccounts, {filter:'$filterWord'}) //filterWord classtaki filter parametresine esitledik.
 // accounts;
 //wire decorator'ı property'ye baglanabilir. Accounts database'den gelen accountları tutar. 
 //accounts.data veya accounts.error olarak iki farkli sonuc doner. 
 // data veya errordan yanlizca biri doner. 
+
 //2. yol: calling Apex method imperatively
 //1. @wire silinir, 
 //2. cacheable=true yazmaya gerek kalmaz
@@ -17,14 +18,14 @@ filterWord = '';
 accounts;//accounts butonla gelen accountlari tutacak
 error;
 handleGetAccounts(){
-    //Butona onclick event ekleyecegiz. 
-    getAccounts({filter:this.filterWord})
-    .then(result=>{
-        this.accounts = result;
-    })
-    .catch(error =>{
-        this.error = undefined;
-    });
+//Butona onclick event ekleyecegiz. 
+getAccounts({filter:this.filterWord})
+.then(result=>{
+    this.accounts = result;
+})
+.catch(error =>{
+    this.error = undefined;
+});
 }
 
 handleChange(event){
