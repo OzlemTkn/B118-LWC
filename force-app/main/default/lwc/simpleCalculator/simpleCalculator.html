@@ -1,0 +1,26 @@
+<template>
+    <lightning-card title = "Simple Calculator">
+        <lightning-input type = "number" label="Number 1" placeholder="please enter a number" onchange={number1Handler}></lightning-input>
+        <lightning-input type = "number" label="Number 2" placeholder="please enter a number" onchange={number2Handler}></lightning-input>
+<lightning-button-group>
+    <lightning-button name="topla" label="Sum" onclick={handleChange}></lightning-button>
+    <lightning-button name="cikar" label="Substract" onclick={handleChange}></lightning-button>
+    <lightning-button name="carp" label="Multiply" onclick={handleChange}></lightning-button>
+    <lightning-button name="bol" label="Divide" onclick={handleChange}></lightning-button>
+    <lightning-button name="reset" label="Reset" onclick={handleChange}></lightning-button>
+</lightning-button-group>
+<hr>
+<p>Result: {result} </p>
+<!-- <p>Previous Result: {previousResult}</p> -->
+<lightning-input type="checkbox" label="Previous Result" onchange={previousResultHandler}></lightning-input>
+<template if:true = {showPreviousResult}>
+    <ul>
+<template for:each={previousResult} for:item="preResult">
+    <li key={preResult}>{preResult}</li>
+   
+</template>
+</ul>
+</template>
+
+    </lightning-card>
+</template>
