@@ -1,0 +1,11 @@
+<template>
+    <lightning-card title="Slot Named Child">
+<h1>Aile Agaci:</h1>
+
+<h1 >Anne: <slot name="a"></slot></h1><!--isimli slot atanan slot ismine gore
+data ceker. -->
+<h1>Baba: Tom <slot name="b"></slot></h1>
+<h1>Son: Tim </h1>
+<slot></slot><!--isimsiz slot parentta kalan tum diger bilgileri ceker.-->
+    </lightning-card>
+</template>

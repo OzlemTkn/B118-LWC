@@ -1,0 +1,12 @@
+<template>
+    <lightning-card title="Country City Details">
+        <slot></slot>
+        <h1>Country:<slot name="co"></slot></h1>
+        <h1>City:<slot name="ci"></slot></h1>
+        <h1>Famous For:<slot name="ff"></slot></h1> 
+        <div>BU CHILD COMPONENTTEN GELIYOR</div>
+        <!-- buradaki tagler slot icerisende degilse shadow dom da kalir. Stil degisikligi yapmak istersek styling hook kullaniriz.  -->
+<!--Dinamik olarak parent uzerinden kullanicidan alinan data
+child componente aktarildi.-->
+    </lightning-card>
+</template>

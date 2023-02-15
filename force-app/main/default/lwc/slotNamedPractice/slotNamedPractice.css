@@ -1,0 +1,4 @@
+div{
+    color:var(--rnk, yellow);
+    background-color: var(--bg, black);
+}

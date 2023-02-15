@@ -1,12 +1,41 @@
 <template>
    <lightning-card title="Slot Parent">
     <h1>1. Parent baslik </h1>
+
     <c-slot-child> 
         <div style="color:brown">5. Bu bir test yazisi parenttan geliyor </div> 
-        <p style="color:brown">6. Bu paragraf parenttan geliyor</p>
+        <p class="slds-border_bottom">6. Bu paragraf parenttan geliyor</p>
+        <h1>h1 Child baslik</h1>
     </c-slot-child>
-    <p>4. Parent paragraf. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, molestiae. Aut veniam dignissimos corporis ratione. Deserunt, aperiam fuga. </p>
+
+
+    <p class="slds-box slds-theme_shade slds-theme_alert-texture">4. Parent paragraf. Lorem ipsum dolor sit amet, consectetur adipisicing elit. Esse, molestiae. Aut veniam dignissimos corporis ratione. Deserunt, aperiam fuga. </p>
+
+<c-slot-named-child>
+    <span slot="a">Ayse</span>
+    <span slot="b">Orhan</span>
+    <p>Children: Elif ve Ela</p>
+    <div>Nieces: Salih </div>
+</c-slot-named-child>
    </lightning-card> 
 
+   <lightning-card title = "Country City Practice">
+<lightning-input name="country" type="text" label="Country" onchange={handleChange}></lightning-input>
+<lightning-input name="city"  type="text" label="City" onchange={handleChange}></lightning-input>
+<lightning-input name="famous" type="text" label="Famous For" onchange={handleChange}></lightning-input>
+
+<c-slot-named-practice>
+    <!-- *unnamed slot*-->
+    <h1>ulke:{country}</h1>
+    <h1>sehir:{city}</h1>
+    <h1>Unlu:{famousFor}</h1>
+<!--*named slot*-->
+    <span slot="co">{country}</span>
+    <span slot="ci">{city}</span>
+    <span slot="ff">{famousFor}</span>
+
+</c-slot-named-practice>
+
+</lightning-card>
    
 </template>

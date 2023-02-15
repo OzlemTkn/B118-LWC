@@ -1,0 +1,20 @@
+h1{/*parent uzerindeki tum h1 taglerini slotlar dahil olmak uzere gunceller*/
+    color:blue;
+}
+c-slot-child p,h1,div{/*c-slot-child yazdigimizda icerisine ulasamaz. belli bir tag'e ulasmak icin tag ismini belirtmemiz gerekir.*/
+    background-color: aquamarine;
+}
+c-slot-named-practice {
+    color:blueviolet;
+    --rnk:rgb(124, 245, 124);/*Styling hook ile parent uzerinden alt componentin stilini overrite ettik*/
+    --bg:darkblue;
+}
+ span{ /*parent uzerinde oldugu icin stili guncellenir. */
+    color:brown;
+    background-color: rgb(242, 255, 196);
+ }
+
+ div{
+    color:yellow;
+    background-color: black;
+ }
