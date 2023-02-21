@@ -1,0 +1,16 @@
+<template>
+   <lightning-card title="Getter" icon-name="doctype:webex">
+    <p>Toplama:{toplama}</p>
+    <p>Cikarma:{cikarma}</p>
+    <p>Carpma:{carpma}</p>
+    <p>Bolme:{bolme}</p>
+
+    <lightning-input type="number" 
+    label="Index No" 
+    onblur={handleBlur}
+    placeholder="bir index no giriniz"></lightning-input>
+<p>{indexNo}</p>
+<p>Element Adi: {getElement}</p>
+<!-- get method ismi ile array icerisinden element cekeriz. -->
+   </lightning-card> 
+</template>

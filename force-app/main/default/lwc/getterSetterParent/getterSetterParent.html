@@ -1,0 +1,19 @@
+<template>
+<lightning-card title = "Setter Example">
+    <lightning-input type="number" onchange={handleAge} label="Yas" placeholder="yasi giriniz">
+    </lightning-input>
+
+    <lightning-button label="update age" onclick ={handleUpdatedAge}></lightning-button>
+
+    <p>Isim: {name}</p>
+    <p>Yas: {age} </p>
+    <p>Guncellenen Yas:{newAge}</p> 
+    <!-- yasin son hali butona tiklayinca newAge'i gunceller. burada yansitilir.  -->
+    <p>Set ile gelen deger: {updatedAge}</p>
+
+</lightning-card>
+
+    <lightning-card>
+<c-getter-setter customer-age= {parentAge}></c-getter-setter>
+    </lightning-card>
+</template>
