@@ -20,7 +20,7 @@ export default class GetterSetterParent extends LightningElement {
             //validation mesaji yazdirdik.
           
         }else{
-            this.newAge = value ;
+            this.newAge = value * 10 ;
             //update islemi yaptik
         }
     }
