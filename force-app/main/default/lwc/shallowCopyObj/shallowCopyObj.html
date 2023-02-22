@@ -1,0 +1,19 @@
+<template>
+    <lightning-card title="Shallow Copy of Object">
+        <!-- 1.ornek -->
+        <lightning-button label="ClickMe" onclick={handleChange}></lightning-button>
+    </lightning-card>
+
+    <lightning-card title="Shallow copy get-set" >
+
+        <lightning-input type="text" label="Name" onblur={handleName}></lightning-input>
+
+        <lightning-input type="number" label ="Age" onblur={handleAge}></lightning-input>
+
+       <div>{person.name}</div>
+       <div>{person.age}</div>
+       
+
+
+    </lightning-card>
+</template>

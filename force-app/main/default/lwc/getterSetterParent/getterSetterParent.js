@@ -11,7 +11,8 @@ export default class GetterSetterParent extends LightningElement {
     }
 
     get updatedAge(){
-        return parseInt(this.age) +1 ;//age degerini bir artirarak cektik. Concat yapmamasi icin parseInt kullandik. 
+        return parseInt(this.age) +1 ;
+        //age degerini bir artirarak cektik. Concat yapmamasi icin parseInt kullandik. 
     }
     set updatedAge(value){
         if(value<0 || value > 150){

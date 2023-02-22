@@ -1,0 +1,11 @@
+<template>
+    <!-- 3. child component cekildi, property degeri guncellendi.  -->
+<div>
+    <c-this-child my-name = {parentValue}></c-this-child>
+    <lightning-button label="Change Value" onclick={handleChange}></lightning-button>
+</div>
+<div>
+    <lightning-button label="Call Child" onclick={handleCall}></lightning-button>
+</div>
+
+</template>
