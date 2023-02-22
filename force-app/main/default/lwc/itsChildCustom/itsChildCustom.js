@@ -9,4 +9,5 @@ export default class ItsChildCustom extends LightningElement {
         //Olusturdugumuz eventi dispatch ediyoruz.
         this.dispatchEvent(childEvent);
     }
+    //Child component, dispatchEvent() methodunu kullanarak custom eventi tetiklediğinde, parent componentteki handleSelected() fonksiyonu, parametre olarak event objectiyle birlikte çağrılır. Daha sonra event.detail özelliğini kullanarak child componentten aktarilan dataya erişebilirsiniz
 }
