@@ -3,7 +3,7 @@ import {CurrentPageReference} from 'lightning/navigation';//navigation import ed
 import { registerListener } from 'c/pubsub';   //pubsub import ettik    
 export default class SubComp extends LightningElement {
     myName;
-    @wire(CurrentPageReference) pageRef;//Iki unrelated componenti iliskilendirmek icin @wire kullanilir. 
+    @wire(CurrentPageReference) pageRef;//Unrelated componenti iliskilendirmek icin @wire kullanilir. 
 connectedCallback(){//eventName, callback, thisArg parametreleri registerListener ile kullanilir. 
     registerListener('pubsubevent', this.handleCallBack,this)
     //registerListener ile publisherdan gelen data handle edilir. 

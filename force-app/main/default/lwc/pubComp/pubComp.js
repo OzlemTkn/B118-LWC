@@ -5,7 +5,7 @@ import {CurrentPageReference} from 'lightning/navigation';
 import { fireEvent } from 'c/pubsub';       
 export default class PubComp extends LightningElement {
     @wire(CurrentPageReference) pageRef;
-    
+    //Unrelated componenti iliskilendirmek icin @wire kullanilir. 
     handleChange(event){//pageRef, eventName, payload parametrelerini girelim
         //inputla gelen deger pubsubevent ismiyle karsi tarafa gonderilir. 
         fireEvent(this.pageRef,'pubsubevent', event.target.value)
