@@ -55,7 +55,7 @@ export default class ShallowCopyObj extends LightningElement {
             // Setten gelen degere aktar
             this.person = person1;
             this.orgPersonGoster();
-            // logOriginalPerson methodu ile orginal degerlerin oldugu methodu cagiriyoruz.
+            // orgPersonGoster methodu ile orginal degerlerin oldugu methodu cagiriyoruz.
 
         }
     
@@ -67,7 +67,7 @@ export default class ShallowCopyObj extends LightningElement {
             // Setten gelen degere aktar
             this.person = person1;
            this.orgPersonGoster();
-             // logOriginalPerson methodu ile orginal degerlerin oldugu methodu cagiriyoruz.
+             // orgPersonGoster methodu ile orginal degerlerin oldugu methodu cagiriyoruz.
       }        
 
       orgPersonGoster() {
