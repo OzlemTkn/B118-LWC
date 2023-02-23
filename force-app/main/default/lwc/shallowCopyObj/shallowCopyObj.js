@@ -29,7 +29,7 @@ export default class ShallowCopyObj extends LightningElement {
 
 
    //2.ornek: get ve set ile shallow copy olusturma
-        @track
+      
          _person = {
             name: 'John Doe',
             age: 30
@@ -46,17 +46,15 @@ export default class ShallowCopyObj extends LightningElement {
             // Shallow copy degerini al, value aktar
             this._person = { ...value };
         }
-    
+       
         handleNameChange(event) {
             // person objectin shallow kopyasını al
             const person1 = { ...this.person };
             // Name property kullanicinin girdigi degerle update et
             person1.name = event.target.value;
             // Setten gelen degere aktar
-            this.person = person1;
-            this.orgPersonGoster();
-            // orgPersonGoster methodu ile orginal degerlerin oldugu methodu cagiriyoruz.
-
+          //this.person = person1;
+          this.connectedCallback();
         }
     
         handleAgeChange(event) {
@@ -65,17 +63,14 @@ export default class ShallowCopyObj extends LightningElement {
             // Yasi update et
             person1.age = event.target.value;
             // Setten gelen degere aktar
-            this.person = person1;
-           this.orgPersonGoster();
-             // orgPersonGoster methodu ile orginal degerlerin oldugu methodu cagiriyoruz.
+           //this.person = person1;
+           this.connectedCallback();
       }        
-
-      orgPersonGoster() {
-            //Yukarida update islemi yapılmadan once original versiyonu gozlemleyebiliriz.c
-            const originalPerson = { ...this._person };
-            console.log('Original name:', this._person.name);
-            console.log('Original age:', this._person.age);
-        }
+      connectedCallback() {
+        console.log(this._person.name);
+        console.log(this._person.age); // Log the original values of the _person object
+    }
+  
     }
 
       
