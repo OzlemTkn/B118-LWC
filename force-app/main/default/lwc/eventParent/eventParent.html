@@ -1,0 +1,24 @@
+<template>
+    <lightning-card title="Parent">
+        <!-- 3. child uzerinde olusturulan custom event parentta kullanildi. 
+        Yeni bir butona aktarildi. -->
+        <lightning-layout>
+            <lightning-layout-item padding="around-small">
+                <c-event-child1 onclicked={handleButtonClick1}></c-event-child1>
+               <div>Event1 : {eventName}</div> 
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+                <c-event-child2 onclicked2={handleButtonClick2}></c-event-child2>
+               <div>Event2 : {eventName2}</div> 
+            </lightning-layout-item>
+
+            <lightning-layout-item padding="around-small">
+                <c-event-child3 onclicked3={handleButtonClick3}></c-event-child3>
+               <div>Event3 : {eventName3}</div> 
+            </lightning-layout-item>
+      
+    </lightning-layout>
+
+    </lightning-card>
+</template>

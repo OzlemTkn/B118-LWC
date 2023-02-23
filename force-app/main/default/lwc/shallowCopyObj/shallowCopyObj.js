@@ -53,7 +53,7 @@ export default class ShallowCopyObj extends LightningElement {
             // Name property kullanicinin girdigi degerle update et
             person1.name = event.target.value;
             // Setten gelen degere aktar
-          //this.person = person1;
+        this.person = person1;
           this.connectedCallback();
         }
     
@@ -63,7 +63,7 @@ export default class ShallowCopyObj extends LightningElement {
             // Yasi update et
             person1.age = event.target.value;
             // Setten gelen degere aktar
-           //this.person = person1;
+         this.person = person1;
            this.connectedCallback();
       }        
       connectedCallback() {

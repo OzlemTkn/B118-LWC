@@ -11,5 +11,4 @@ export default class ThisParent extends LightningElement {
         childComp.testChildMethod(sendData);
         console.log(childComp);
     }
-
 }
