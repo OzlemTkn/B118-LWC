@@ -10,5 +10,6 @@ connectedCallback(){//eventName, callback, thisArg parametreleri registerListene
 }
 handleCallBack(data){//callback fonksiyonu bu fonksiyon ile handle edilir. 
     this.myName = data.toUpperCase();
+    //alert('bu mesaj subscriberda calisti');
 }
 }

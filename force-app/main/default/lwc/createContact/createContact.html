@@ -1,0 +1,23 @@
+<template>
+    <lightning-card title="Create a Contact" icon-name="standard:contact">
+        <lightning-input label="First Name" 
+        data-fieldname="FirstName"
+        type="text" 
+        value={conObject.FirstName} 
+        onchange={setContact}></lightning-input>
+
+        <lightning-input label="Last Name" 
+        type="text" 
+        data-fieldname="LastName"
+        value={conObject.LastName} 
+        onchange={setContact}></lightning-input>
+
+        <lightning-input label="Email" 
+        type="text" 
+        data-fieldname="Email"
+        value={conObject.Email} 
+        onchange={setContact}></lightning-input>
+
+        <lightning-button label = "Save" type="Submit" onclick={saveContact}></lightning-button>
+    </lightning-card>
+</template>
