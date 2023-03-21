@@ -7,4 +7,12 @@
         <target>lightning__RecordPage</target>
         <target>lightning__AppPage</target>
     </targets>
+<targetConfigs>
+    <targetConfig targets="lightning__HomePage">
+        <property name="subject" type="String" />
+        <property name="greeting" type="String" />
+    </targetConfig>
+
+</targetConfigs>
+
 </LightningComponentBundle>

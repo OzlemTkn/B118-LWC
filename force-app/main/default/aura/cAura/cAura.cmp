@@ -1,0 +1,15 @@
+<aura:component>
+
+<p>Ben Child componentim</p>
+<aura:attribute name="child1" type="String" default="Merhaba VS Code"/>
+<div>Child Comp Deger: {!v.child1}</div>
+
+<!--boundn Expression-->
+
+<aura:attribute name="childAttribute" type="String" default="childBound"></aura:attribute>
+<div>Child attribute: {!v.childAttribute}</div>
+
+
+<lightning:button name="changeValue" label="Change Child" onclick="{!c.childHandler}"/>
+
+</aura:component>	

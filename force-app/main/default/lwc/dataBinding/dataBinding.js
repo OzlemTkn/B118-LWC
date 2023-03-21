@@ -1,7 +1,11 @@
-import { LightningElement } from 'lwc';
+import { api, LightningElement } from 'lwc';
 
 export default class DataBinding extends LightningElement {
 //Property olusturduk.
+@api greeting;
+@api subject;
+
+
 isim = "Ali";
 soyisim = 'Ozturk';
 ulke = 'Turkiye';
