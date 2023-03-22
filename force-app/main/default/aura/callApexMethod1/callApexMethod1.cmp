@@ -1,0 +1,37 @@
+<aura:component implements="flexipage:availableForAllPageTypes" 
+controller="AuraClass">
+
+<aura:attribute name="message" type="String" />
+
+<lightning:button name="callApex" label="Show Message" onclick="{!c.messageHandler}"/>
+
+<p>Apex message:{!v.message}</p>
+<!--Contact ID ile Contact bilgisi cekelim. -->
+
+<aura:attribute name="con" type="Contact"/>
+<lightning:card>
+<lightning:button name="getContacts" label="Get Contact" onclick="{!c.onclickHandler}"/>
+
+<p>Contact Name: {!v.con.Name}</p>
+<p>Contact Phone: {!v.con.Phone}</p>
+<p>Contact Id: {!v.con.Id}</p>
+
+</lightning:card>
+<!--Kullanicidan alinan input degere gore sorgulama yaparak Contact bilgisi getiriniz.-->
+<aura:attribute name="contactList" type="Contact[]"/>
+<aura:attribute name="selectedContact" type="Contact"/>
+
+<lightning:card>
+<lightning:input name="SelectContact" label="Search" onchange="{!c.selectContact}"/>
+
+<aura:iteration items="{!v.contactList}" var="contact">
+<div>Name: {!contact.Name}</div>
+<div>Phone: {!contact.Phone}</div>
+
+</aura:iteration>
+
+</lightning:card>
+
+
+
+</aura:component>	

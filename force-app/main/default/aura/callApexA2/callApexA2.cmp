@@ -1,0 +1,32 @@
+<aura:component  implements=
+"flexipage:availableForAllPageTypes" 
+controller="myClass">
+
+<aura:attribute 
+name="con" type="Contact"/>
+<lightning:card>
+
+    <lightning:button name="getContacts" 
+    label="Get Contact" 
+    onclick="{!c.getContactHandler}"/>
+
+<p>Contact Id:{!v.con.Id}</p>
+<p>Contact Name:{!v.con.Name}</p>
+
+</lightning:card>
+
+<aura:attribute name="contactList" type="Contact[]" />
+<aura:attribute name="selectedContact" type="Contact" />
+
+<lightning:card>
+<lightning:input name="SelectContact" label="Search" onchange="{!c.selectContact}"/>
+<aura:iteration items="{!v.contactList}" var="contact">
+    <div >
+        {!contact.LastName},  {!contact.Id}
+    </div>
+    <div>{!contact.Name}</div>
+</aura:iteration>
+
+</lightning:card>
+
+</aura:component>	

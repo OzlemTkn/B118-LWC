@@ -1,0 +1,10 @@
+<aura:component>
+
+<aura:registerEvent name="newEvent" type="c:firstEvt"/>
+<div>Child Component</div>
+
+<lightning:button name="Click Me" 
+label="Fire Event" onclick="{!c.onclickHandler}"/>
+<!--Event fire etmek icin child controller git-->
+
+</aura:component>	

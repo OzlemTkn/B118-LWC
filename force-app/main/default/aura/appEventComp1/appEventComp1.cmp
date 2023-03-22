@@ -1,0 +1,8 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+<!-- Herhangi bir componenti register islemi yapiyoruz -->
+<aura:registerEvent name="myEvent" type="c:newEvent2"/>
+
+<lightning:button name="fireEvent" label="Fire Event" 
+onclick="{!c.onclickHandler}"/>
+<p>Birinci component</p>
+</aura:component>	

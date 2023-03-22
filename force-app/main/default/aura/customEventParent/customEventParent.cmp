@@ -1,0 +1,19 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+<aura:handler name="newEvent" 
+event="c:newEvent1" 
+action="{!c.fireNewEvent}"/>
+
+<aura:handler name="newEvent" 
+event="c:newEvent1" 
+action="{!c.handleCaptureClick}" phase="capture" />
+
+<aura:handler name="newEvent" 
+event="c:newEvent1" 
+action="{!c.handleBubbleClick}"/>
+<lightning:card>
+    <p>Parent Component</p>
+
+     <c:customEventChild/>
+</lightning:card>
+</aura:component>	

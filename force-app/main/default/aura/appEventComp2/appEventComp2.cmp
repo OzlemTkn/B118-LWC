@@ -1,0 +1,5 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+
+<aura:handler event="c:newEvent2" action="{!c.handleEvent}"/>
+<p>İkinci component</p>
+</aura:component>	

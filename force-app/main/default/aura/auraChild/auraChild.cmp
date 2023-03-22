@@ -1,0 +1,5 @@
+<aura:component>
+<p>Ben Child Componentim</p>
+<aura:attribute name="childAttribute" type="String" default="Merhaba VS Code"/>
+<div>Child attribute:{!v.childAttribute}</div>
+</aura:component>	

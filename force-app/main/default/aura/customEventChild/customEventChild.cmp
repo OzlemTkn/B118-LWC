@@ -1,0 +1,7 @@
+<aura:component>
+<aura:registerEvent name="newEvent" type="c:newEvent1"/>
+<p>Child Component</p>
+
+<lightning:button name="Click" label="Click Me" 
+onclick="{!c.onclickHandler}"/>
+</aura:component>	

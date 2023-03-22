@@ -7,7 +7,7 @@
                 if(state==='SUCCESS'){//Gelen cevap basarili ise
                       component.set("v.message",response.getReturnValue());  
                 }else{
-console.log('malesef mesaj yok, islem basarisiz...')
+                      console.log('malesef mesaj yok, islem basarisiz...')
                 }
             }
         );

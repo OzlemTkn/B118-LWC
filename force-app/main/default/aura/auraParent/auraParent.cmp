@@ -1,0 +1,15 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+<lightning:card title="Aura Parent Component">
+<p>Ben Parent componentim</p>
+<c:auraChild childAttribute="Merhaba Aura Elemnt"/>
+</lightning:card>
+
+<!--Bound Expression Kullanimi-->
+<aura:attribute name="parentAttribute" type="String" default="parent value"/>
+
+<lightning:card>
+<lightning:button name="changeValue" label="Change Value" onclick="{!c.handleChange}"/>
+<div>Parent Attribute: {!v.parentAttribute}</div>
+<c:auraChild childAttribute="{#v.parentAttribute}"/>
+</lightning:card>
+</aura:component>	

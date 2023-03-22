@@ -1,0 +1,6 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+    <aura:handler name="click" event="c:myClickEvent" action="{!c.handleCaptureClick}" capture="true"/>
+    <aura:handler name="click" event="c:myClickEvent" action="{!c.handleBubbleClick}"/>
+
+    <c:childComponent />
+</aura:component>	

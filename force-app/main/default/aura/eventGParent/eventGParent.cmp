@@ -1,0 +1,7 @@
+<aura:component implements="flexipage:availableForAllPagetypes">
+    <aura:handler name="newEvent" event="c:firstEvt" 
+    action="{!c.handleEvent}"/>
+
+    <c:eventPaura/> <!--child cagirilir. -->
+
+</aura:component>	

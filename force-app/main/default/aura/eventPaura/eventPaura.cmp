@@ -1,0 +1,23 @@
+<aura:component implements="flexipage:availableForAllPageTypes">
+<!--Once event file olustur COMPONENT yap, deploy et-->
+
+<aura:handler name="newEvent" 
+event="c:firstEvt" 
+action="{!c.fireNewEvent}" />
+
+<!--capture kullanımi için 2 event olsutur-->
+<aura:handler name="newEvent" 
+event="c:firstEvt" 
+action="{!c.handleCaptureClick}" phase="capture"/>
+
+<aura:handler name="newEvent" 
+event="c:firstEvt" 
+action="{!c.handleBubbleClick}" />
+<!--ekle-->
+
+<lightning:card>
+<div>Parent Comp</div>
+<c:eventCaura/><!--Child componenti cagir-->
+
+</lightning:card>
+</aura:component>	
